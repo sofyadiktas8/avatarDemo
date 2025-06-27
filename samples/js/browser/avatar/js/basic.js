@@ -85,7 +85,7 @@ function setupWebRTC(iceServerUrl, iceServerUsername, iceServerCredential) {
         if (peerConnection.iceConnectionState === 'connected') {
             document.getElementById('stopSession').disabled = false
             document.getElementById('speak').disabled = false
-            document.getElementById('configuration').hidden = true
+            // document.getElementById('configuration').hidden = true
         }
 
         if (peerConnection.iceConnectionState === 'disconnected' || peerConnection.iceConnectionState === 'failed') {
@@ -93,7 +93,7 @@ function setupWebRTC(iceServerUrl, iceServerUsername, iceServerCredential) {
             document.getElementById('stopSpeaking').disabled = true
             document.getElementById('stopSession').disabled = true
             document.getElementById('startSession').disabled = false
-            document.getElementById('configuration').hidden = false
+            // document.getElementById('configuration').hidden = false
         }
     }
 
@@ -121,7 +121,7 @@ function setupWebRTC(iceServerUrl, iceServerUsername, iceServerCredential) {
         (error) => {
             console.log("[" + (new Date()).toISOString() + "] Avatar failed to start. Error: " + error)
             document.getElementById('startSession').disabled = false
-            document.getElementById('configuration').hidden = false
+            // document.getElementById('configuration').hidden = false
         }
     );
 }
